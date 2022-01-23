@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import ResumePage from './pages/resume'
 import Home from './pages';
 
 function App() {
   return (
-
-      <>
-       <Home />
-      </>
+      <Router>
+        <Routes>
+          <Route path="/" component={Home} exact />
+          <Route path="/resume" component={ResumePage} exact />
+        </Routes>
+      </Router>
 
   );
 }
