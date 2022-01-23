@@ -21,7 +21,7 @@ const HeroSection = () => {
   };
 
   return (
-    <HeroContainer>
+    <HeroContainer id='home'>
       <HeroBackground>
           <VideoBackground autoPlay loop muted 
           src={Video} type='video/mp4' />
@@ -36,6 +36,11 @@ const HeroSection = () => {
                 onMouseLeave={onHover}
                 primary="true"
                 dark="true"
+                smooth={true} 
+                duration={500} 
+                spy={true} 
+                exact='true' 
+                offset={-80}
                 > 
                   Check out my resume! {hover ? <ArrowForward /> : <ArrowRight />}
                 </Button>
