@@ -29,9 +29,7 @@ const Info = ({lightBg, id, imgStart, topLine,
                 <Heading className="header" 
                 lightText={lightText}
                 >{headline}</Heading>
-              <FadeInDiv>
-                <Subtitle darkText={darkText} >{description}</Subtitle>
-              </FadeInDiv>
+                <Subtitle >{description}</Subtitle>
        {/*         <BtnWrap>
                   <Button to='home'
                   smooth={true}

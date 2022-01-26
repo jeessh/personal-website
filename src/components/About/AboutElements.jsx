@@ -3,8 +3,8 @@ import { fadeInLeft } from 'react-animations';
 
   
 export const AboutContainer = styled.div`
-  color: #fff;
-  background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+  color: #010606;
+  background: #010606;
 
   @media screen and  (max-width: 768px) {
     padding: 100px 0;
@@ -13,12 +13,15 @@ export const AboutContainer = styled.div`
 export const AboutWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 1000px;
+  height: 500px;
   width: 100% auto;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 24px;
+  padding-top: 200px;
+  padding-bottom: 700px;
+  padding-left: 30px;
+  padding-right: 30px;
   justify-content: center;
 `
 export const AboutRow = styled.div`
@@ -67,24 +70,29 @@ export const TopLine = styled.p`
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: 48px;
-  line-height: 1.1;
-  font-weight: 600px;
-  color: ${({lightText}) => (lightText ? '#f7f8fa' : '#010606')};
+  color: #fff;
+  text-align: center;
+  transition: 1s ease-in-out;
+
+  @media screen and (max-width: 768px) {
+    font-size: 40px
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 32px
+  }
   
 
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
-  }
+/*   color: #fff;
+  font-size: 48px;
+  text-align: center;
+  transition: 1s ease-in-out; */
+
 `
 export const Subtitle  = styled.p`
-  max-width: 440px;
   font-size: 18px;
   line-height: 24px;
-
-  
-
-  color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
-`
+  color: #fff;
+  `
 export const BtnWrap = styled.div`
   display:flex;
   justify-content: flex-start;
@@ -101,7 +109,7 @@ export const Img = styled.img`
 
   @media screen and (max-width: 768px) {
   position: relative;
-  top: -200px;
+  top: 100px;
   };
 `;
 
@@ -112,3 +120,43 @@ const fadeInAnimation = keyframes`
 export const FadeInDiv = styled.div`
   animation: 5s ${fadeInAnimation};
 `;
+
+export const AboutText2 = styled.div`
+  max-width: 1600px;
+  padding-top: 0;
+  padding-bottom: 0px;
+  position: relative;
+  align-items: center;
+  top: -120px;  
+
+`
+export const AboutCard = styled.div`
+  background: #fdba8d35;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  padding:  30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: all 0.8s ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+  }
+`
+
+export const AboutCardBG = styled.div`
+  background: #fdba8d35;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  padding:  30px;
+  max-width: 800px;
+  position: relative;
+  top: -300px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+`
