@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Button } from '../ButtonElements'
-import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, FadeInDiv, ImgWrap, Img } from './AboutElements'
+import { AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, FadeInDiv, ImgWrap, Img } from './AboutElements'
 import ScrollAnimation from 'react-animate-on-scroll';
 
 
@@ -19,43 +19,49 @@ const About = ({lightBg, id, imgStart, topLine,
   
   return (
     <>
-      <InfoContainer lightBg={lightBg} id="about">
-        <InfoWrapper>
-          <InfoRow imgStart={imgStart}>
-          
-          <Column1 style={{transform: `translateX(${offsetY * 0.06}px)` }}>
-            <TextWrapper>
-                <TopLine>{topLine}</TopLine>
-                <Heading className="header" 
-                lightText={lightText}
-                >{headline}</Heading>
-              <FadeInDiv>
-                <Subtitle darkText={darkText} >{description}</Subtitle>
-              </FadeInDiv>
-       {/*         <BtnWrap>
-                  <Button to='home'
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact='true'
-                  offset={-80}
-                  primary={primary ? 1 : 0}
-                  dark={dark ? 1 : 0}
-                  dark2={dark2 ? 1 : 0}
-                  >{buttonLabel}
-                  </Button>
-                 </BtnWrap>  */}
-              </TextWrapper>
-             </Column1>
-          
+      <AboutContainer id="about">
+        <AboutWrapper>
+          <AboutRow>
+            <Column1 style={{transform: `translateX(${offsetY * 0.1}px)  translateY(${offsetY * 0.05}px)`}}>
+                <TextWrapper>
+                <ScrollAnimation animateIn="FadeIn" duration={5000}>
+                    <TopLine>{topLine}</TopLine>
+                    <Heading className="header" 
+                    lightText={lightText}
+                    >{headline}</Heading>
+                    <Subtitle darkText={darkText} >{description}</Subtitle>
+                </ScrollAnimation>
+                </TextWrapper>
+            </Column1>
              <Column2> 
               <ImgWrap >
                 <Img src={img} alt={alt}/>
               </ImgWrap>
              </Column2>
-          </InfoRow>
-        </InfoWrapper>
-      </InfoContainer>
+          </AboutRow>
+        </AboutWrapper>
+
+        <AboutWrapper>
+          <AboutRow>
+            <Column1 style={{transform: `translateX(${offsetY * 0.1}px)  translateY(${offsetY * 0.05}px)`}}>
+                <TextWrapper>
+                <ScrollAnimation animateIn="FadeIn" duration={5000}>
+                    <TopLine>{topLine}</TopLine>
+                    <Heading className="header" 
+                    lightText={lightText}
+                    >{headline}</Heading>
+                    <Subtitle darkText={darkText} >{description}</Subtitle>
+                </ScrollAnimation>
+                </TextWrapper>
+            </Column1>
+             <Column2> 
+              <ImgWrap >
+                <Img src={img} alt={alt}/>
+              </ImgWrap>
+             </Column2>
+          </AboutRow>
+        </AboutWrapper>
+      </AboutContainer>
     </>
   )
 }

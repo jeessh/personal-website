@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
 
   
-export const InfoContainer = styled.div`
+export const AboutContainer = styled.div`
   color: #fff;
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
 
@@ -10,10 +10,10 @@ export const InfoContainer = styled.div`
     padding: 100px 0;
   }
 `
-export const InfoWrapper = styled.div`
+export const AboutWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 1200px;
+  height: 1000px;
   width: 100% auto;
   max-width: 1100px;
   margin-right: auto;
@@ -21,7 +21,7 @@ export const InfoWrapper = styled.div`
   padding: 0 24px;
   justify-content: center;
 `
-export const InfoRow = styled.div`
+export const AboutRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
@@ -47,6 +47,12 @@ export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
   padding-bottom: 0px;
+  position: relative;
+  top: -120px;
+
+  @media screen and (max-width: 768px) {
+    top: -40px;}
+
 `
 export const TopLine = styled.p`
   color: #fdba8d;
@@ -74,6 +80,7 @@ export const Subtitle  = styled.p`
   max-width: 440px;
   font-size: 18px;
   line-height: 24px;
+
   
 
   color: ${({darkText}) => (darkText ? '#010606' : '#fff')};
