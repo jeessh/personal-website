@@ -1,38 +1,25 @@
-import React from 'react';
-import { 
-  SidebarContainer, 
-  CloseIcon, 
-  SideIcon,
-  SidebarWrapper,
-  SidebarMenu,
-  SidebarLink,
-  SideButtonWrap,
-  SidebarRoute,
- } 
-from './SidebarElements';
+import React from 'react'
+import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SidebarRoute, SideBtnWrap } from './SidebarElements'
 
-
-const Sidebar = ({ isOpen, toggle }) => {
+const Sidebar = ({isOpen,toggle}) => {
   return (
-  <SidebarContainer isOpen={isOpen} onClick={toggle}>
-      
-      <SideIcon onClick={toggle}>
-          <CloseIcon />
-      </SideIcon>
+    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+      <Icon onClick={toggle}>
+        <CloseIcon />
+      </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>About</SidebarLink>
-          <SidebarLink to="experiences" onClick={toggle}>Experiences</SidebarLink>
-          <SidebarLink to="projects" onClick={toggle}>Projects</SidebarLink>
-          <SidebarLink to="contact" onClick={toggle}>Contact</SidebarLink>
+          <SidebarLink to='about' onClick={toggle}>About Me</SidebarLink>
+          <SidebarLink to='experiences' onClick={toggle}>Experiences</SidebarLink>
+          <SidebarLink to='projects' onClick={toggle}>Projects</SidebarLink>
+          <SidebarLink to='contact' onClick={toggle}>Contact</SidebarLink>
         </SidebarMenu>
-        <SideButtonWrap>
-          <SidebarRoute to= '/resume'>Resume</SidebarRoute>
-        </SideButtonWrap>
+        <SideBtnWrap>
+          <SidebarRoute to='/resume'>Resume</SidebarRoute>
+        </SideBtnWrap>
       </SidebarWrapper>
-  </SidebarContainer>
-  );
-};
+    </SidebarContainer>
+  )
+}
 
-
-export default Sidebar;
+export default Sidebar

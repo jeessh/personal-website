@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Video from '../../videos/video.mp4'
+import Video from '../../videos/HeroBg.mp4'
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements'
 import { Button } from '../ButtonElements'
 
@@ -17,16 +17,13 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroH1>Hey there!</HeroH1>
-        <HeroP>Welcome to my personal site! *Of course it's still
-          in development, but feel free to check browse through my progress :D </HeroP>
-        <HeroBtnWrapper>
-          <Button to='resume' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'               smooth={true} duration={500} spy={true} exact='true' offset={-80}>
-            Resume {hover ? <ArrowForward /> : <ArrowRight/>}
-          </Button>
-        </HeroBtnWrapper>
+        <HeroP></HeroP>
+        <HeroP>Hope you enjoy this deep take into my life :)</HeroP>
       </HeroContent>
     </HeroContainer>
   )
 }
+//
+
 
 export default Hero

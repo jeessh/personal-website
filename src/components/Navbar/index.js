@@ -7,7 +7,7 @@ import { animateScroll as scroll } from 'react-scroll';
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false)
   const changeNav = () => {
-    if(window.scrollY >= 80) {
+    if(window.scrollY >= 750) {
       setScrollNav(true)
     } else {
       setScrollNav(false)
@@ -24,10 +24,10 @@ const Navbar = ({ toggle }) => {
 
   return (
     <>
-    <IconContext.Provider value={{ color: '#fff'}}>
+    <IconContext.Provider value={{ color: '#fdba8d'}}>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to='/' onClick={toggleHome}>dolla</NavLogo>
+          <NavLogo to='/' onClick={toggleHome}>JesseH |</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
@@ -35,27 +35,24 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to='about'
               smooth={true} duration={500} spy={true} exact='true' offset={-80}
-              >About</NavLinks>
+              >About Me</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='discover'
+              <NavLinks to='experiences'
               smooth={true} duration={500} spy={true} exact='true' offset={-80}
-              >Discover</NavLinks>
+              >Experiences</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='services'
+              <NavLinks to='projects'
               smooth={true} duration={500} spy={true} exact='true' offset={-80}
-              >Services</NavLinks>
+              >Projects</NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to='signup'
+              <NavLinks to='contact'
               smooth={true} duration={500} spy={true} exact='true' offset={-80}
-              >Sign Up</NavLinks>
+              >Contact</NavLinks>
             </NavItem>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-          </NavBtn>
         </NavbarContainer>
       </Nav>
     </IconContext.Provider>
