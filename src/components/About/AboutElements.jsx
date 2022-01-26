@@ -18,11 +18,13 @@ export const AboutWrapper = styled.div`
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: auto;
   padding-top: 200px;
   padding-bottom: 700px;
   padding-left: 30px;
   padding-right: 30px;
   justify-content: center;
+  
 `
 export const AboutRow = styled.div`
   display: grid;
@@ -91,6 +93,7 @@ export const Heading = styled.h1`
 export const Subtitle  = styled.p`
   font-size: 18px;
   line-height: 24px;
+  padding-bottom:10px;
   color: #fff;
   `
 export const BtnWrap = styled.div`
@@ -101,6 +104,14 @@ export const ImgWrap = styled.div`
   max-width: 555px;
   height: 100%;
 `;
+
+export const ImgWrap2 = styled.div`
+  max-width: 555px;
+  height: 100%;
+  position: absolute;
+left: -800px;
+`
+
 export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
@@ -111,15 +122,7 @@ export const Img = styled.img`
   position: relative;
   top: 100px;
   };
-`;
-
-const fadeInAnimation = keyframes`
-  ${fadeInLeft};
-`;
-
-export const FadeInDiv = styled.div`
-  animation: 5s ${fadeInAnimation};
-`;
+`
 
 export const AboutText2 = styled.div`
   max-width: 1600px;
@@ -127,7 +130,8 @@ export const AboutText2 = styled.div`
   padding-bottom: 0px;
   position: relative;
   align-items: center;
-  top: -120px;  
+  top: -350px; 
+
 
 `
 export const AboutCard = styled.div`
@@ -140,6 +144,8 @@ export const AboutCard = styled.div`
   padding:  30px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
   transition: all 0.8s ease-in-out;
+  z-index: -1;
+  position: relative;
 
   &:hover {
     transform: scale(1.02);
@@ -156,7 +162,17 @@ export const AboutCardBG = styled.div`
   border-radius: 10px;
   padding:  30px;
   max-width: 800px;
+  z-index: -1;
   position: relative;
   top: -300px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  overflow: scroll;
+`
+
+export const Cutoff = styled.div`
+  background-color: #f9f9f9;
+  height: 80px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 `

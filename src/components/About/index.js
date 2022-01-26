@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 import { Button } from '../ButtonElements'
-import { AboutCardBG, AboutText2, AboutCard, AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, FadeInDiv, ImgWrap, Img } from './AboutElements'
-import ScrollAnimation from 'react-animate-on-scroll';
+import { AboutCardBG, AboutText2, AboutCard, AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, FadeInDiv, ImgWrap, ImgWrap2, Img, Cutoff } from './AboutElements'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom'
 import img1 from '../../images/pfp-1.JPG';
+import img2 from '../../images/Floating.svg';
 
 
 const About = () => {
@@ -24,11 +24,16 @@ const About = () => {
           <AboutRow>
             <Column1 style={{transform: `translateX(${offsetY * 0.1}px)  translateY(${offsetY * 0.05}px)`}}>
                 <TextWrapper>
-                <Fade left>
-
-                    <Heading className="header" >My name's Jesse</Heading>
-                    <Subtitle>But you can call me Jess if you'd like</Subtitle>
-                </Fade>
+                  <Heading className="header" >
+                    <Fade left cascade>
+                      My name's Jesse
+                    </Fade>
+                  </Heading>
+                  <Fade left>
+                    <Subtitle>
+                      But you can call me Jess if you'd like
+                    </Subtitle>
+                  </Fade>
                 </TextWrapper>
             </Column1>
              <Column2> 
@@ -40,7 +45,13 @@ const About = () => {
         </AboutWrapper>
 
         <AboutWrapper>
-                <AboutText2 style={{transform: `translateY(${offsetY * 0.3}px)`}}>
+        <ImgWrap2 style={{transform: `translateX(${offsetY * 0.6}px)`}}>
+                <Img src={img2} alt={'balloon'} />
+              </ImgWrap2>
+
+                <AboutText2 style={{transform: `translateY(${offsetY * 0.4}px)`}}>
+                  {/* <Zoom up> */}
+                  <Fade clear duration={300} exit>
                   <AboutCardBG>
                   <AboutCard>
                     <Heading>Ambition with Curiosity</Heading>
@@ -50,12 +61,13 @@ const About = () => {
                       <Subtitle>hi</Subtitle>
                       </AboutCard>
                       </AboutCardBG>
+                      </Fade>
+             {/*      </Zoom> */}
                 </AboutText2>
-              <ImgWrap >
-                <Img/>
-              </ImgWrap>
+
         </AboutWrapper>
       </AboutContainer>
+      <Cutoff />
     </>
   )
 }
