@@ -48,10 +48,7 @@ const About = () => {
         <ImgWrap2 style={{transform: `translateX(${offsetY * 0.6}px)`}}>
                 <Img src={img2} alt={'balloon'} />
               </ImgWrap2>
-
-                <AboutText2 style={{transform: `translateY(${offsetY * 0.4}px)`}}>
-                  {/* <Zoom up> */}
-                  <Fade clear duration={300} exit>
+                <AboutText2 style={{transform: `translateY(${offsetY * 0.45}px)`}}>
                   <AboutCardBG>
                   <AboutCard>
                     <Heading>Ambition with Curiosity</Heading>
@@ -61,11 +58,9 @@ const About = () => {
                       <Subtitle>hi</Subtitle>
                       </AboutCard>
                       </AboutCardBG>
-                      </Fade>
-             {/*      </Zoom> */}
                 </AboutText2>
-
         </AboutWrapper>
+
       </AboutContainer>
       <Cutoff />
     </>

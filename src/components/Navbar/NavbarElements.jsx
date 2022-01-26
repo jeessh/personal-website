@@ -12,7 +12,7 @@ export const Nav = styled.nav`
   font-size: 1rem;
   position: sticky;
   top:0;
-  z-index:10;
+  z-index:50;
   transition: 0.8s all ease;
   box-shadow: 0 -10px 28px 20px ${({scrollNav}) => (scrollNav ? '#000000ae' : 'transparent')};;
 

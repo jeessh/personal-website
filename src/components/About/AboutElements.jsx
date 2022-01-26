@@ -171,7 +171,7 @@ export const AboutCardBG = styled.div`
 
 export const Cutoff = styled.div`
   background-color: #f9f9f9;
-  height: 80px;
+  height: 81px;
   width: 100%;
   position: relative;
   z-index: 1;

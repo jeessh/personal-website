@@ -5,6 +5,8 @@ import { fadeInLeft } from 'react-animations';
 export const InfoContainer = styled.div`
   color: #f9f9f9;
   background: ${({lightBg}) => (lightBg ? '#f9f9f9' : '#010606')};
+  z-index:1;
+  position: relative;
 
   @media screen and  (max-width: 768px) {
     padding: 100px 0;
@@ -20,7 +22,7 @@ export const InfoWrapper = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
-  z-index: 1000;
+  z-index: 2;
   position: relative;
 `
 export const InfoRow = styled.div`
