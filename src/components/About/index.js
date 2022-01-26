@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 
 
-const Info = ({lightBg, id, imgStart, topLine, 
+const About = ({lightBg, id, imgStart, topLine, 
   lightText, headline, darkText, description, 
   buttonLabel, alt, img, primary, dark, dark2 }) => {
   const [offsetY, setOffsetY] = useState(0);
@@ -19,7 +19,7 @@ const Info = ({lightBg, id, imgStart, topLine,
   
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer lightBg={lightBg} id="about">
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
           
@@ -60,4 +60,4 @@ const Info = ({lightBg, id, imgStart, topLine,
   )
 }
 
-export default Info
+export default About
