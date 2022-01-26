@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import { Button } from '../ButtonElements'
 import { InfoContainer, InfoWrapper, InfoRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, FadeInDiv, ImgWrap, Img } from './InfoElements'
 import ScrollAnimation from 'react-animate-on-scroll';
-import 'animate.css';
 
 
 
@@ -24,15 +23,15 @@ const Info = ({lightBg, id, imgStart, topLine,
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
           
-          <Column1 style={{transform: `translateY(${offsetY * 0.1}px)` }}>
+          <Column1 style={{transform: `translateX(${offsetY * 0.06}px)` }}>
             <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading className="header" 
                 lightText={lightText}
                 >{headline}</Heading>
-                
-                <Subtitle darkText={darkText} style={{transform: `translateY(${offsetY * 0.01}px)` }}>{description}</Subtitle>
-                
+              <FadeInDiv>
+                <Subtitle darkText={darkText} >{description}</Subtitle>
+              </FadeInDiv>
        {/*         <BtnWrap>
                   <Button to='home'
                   smooth={true}
@@ -50,8 +49,8 @@ const Info = ({lightBg, id, imgStart, topLine,
              </Column1>
           
              <Column2> 
-              <ImgWrap>
-                <Img style={{transform: `translateY(${offsetY * 0.3}px)` }} src={img} alt={alt}/>
+              <ImgWrap >
+                <Img src={img} alt={alt}/>
               </ImgWrap>
              </Column2>
           </InfoRow>

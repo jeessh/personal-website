@@ -13,14 +13,11 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 1800px;
+  height: 1200px;
   width: 100% auto;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
-  align-items: top;
-  position: relative;
-  top: -500px;
   padding: 0 24px;
   justify-content: center;
 `
@@ -30,9 +27,11 @@ export const InfoRow = styled.div`
   align-items: center;
   grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
-/*   @media screen and (max-width: 768px) {
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)}
-  } */
+  @media screen and (max-width: 768px) {
+    grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
+    
+
+  }
 `
 export const Column1 = styled.div`
   margin-bottom: 0px;
@@ -73,7 +72,6 @@ export const Heading = styled.h1`
 `
 export const Subtitle  = styled.p`
   max-width: 440px;
-  margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
   
@@ -94,11 +92,16 @@ export const Img = styled.img`
   padding-right: 0;
   border-radius: 60px;
 
+  @media screen and (max-width: 768px) {
+  position: relative;
+  top: -200px;
+  };
 `;
 
 const fadeInAnimation = keyframes`
   ${fadeInLeft};
 `;
+
 export const FadeInDiv = styled.div`
-  animation: 1s ${fadeInAnimation};
+  animation: 5s ${fadeInAnimation};
 `;
