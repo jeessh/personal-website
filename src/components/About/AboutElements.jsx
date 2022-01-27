@@ -5,6 +5,10 @@ import { fadeInLeft } from 'react-animations';
 export const AboutContainer = styled.div`
   color: #010606;
   background: #010606;
+  position: relative;
+  overflow: hidden;
+
+  z-index: 1;
 
   @media screen and  (max-width: 768px) {
     padding: 100px 0;
@@ -14,16 +18,14 @@ export const AboutWrapper = styled.div`
   display: grid;
   z-index: 1;
   height: 500px;
-  width: 100% auto;
+  width: 100%;
   max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: auto;
   padding-top: 200px;
   padding-bottom: 700px;
   padding-left: 30px;
   padding-right: 30px;
   justify-content: center;
+  
   
 `
 export const AboutRow = styled.div`
@@ -54,6 +56,7 @@ export const TextWrapper = styled.div`
   padding-bottom: 0px;
   position: relative;
   top: -120px;
+  z-index: 1;
 
   @media screen and (max-width: 768px) {
     top: -40px;}
@@ -102,24 +105,25 @@ export const BtnWrap = styled.div`
 `;
 export const ImgWrap = styled.div`
   max-width: 555px;
-  height: 100%;
+
 `;
 
 export const ImgWrap2 = styled.div`
   max-width: 555px;
-  height: 100%;
   position: absolute;
-left: -800px;
+  left: -1200px;
+  
 `
 
 export const Img = styled.img`
   width: 100%;
   margin: 0 0 10px 0;
-  padding-right: 0;
   border-radius: 60px;
+  position: relative;
+  z-index:-1;
+
 
   @media screen and (max-width: 768px) {
-  position: relative;
   top: 100px;
   };
 `
@@ -136,13 +140,11 @@ export const AboutText2 = styled.div`
 `
 export const AboutCard = styled.div`
   background: #fdba8d35;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   border-radius: 10px;
-  padding:  30px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  padding:  25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: all 0.8s ease-in-out;
   z-index: -1;
   position: relative;
@@ -155,18 +157,16 @@ export const AboutCard = styled.div`
 
 export const AboutCardBG = styled.div`
   background: #fdba8d35;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 300px;
   border-radius: 10px;
   padding:  30px;
   max-width: 800px;
   z-index: -1;
   position: relative;
-  top: -300px;
+  top: -400px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-  overflow: scroll;
 `
 
 export const Cutoff = styled.div`

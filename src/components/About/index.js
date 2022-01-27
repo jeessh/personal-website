@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Button } from '../ButtonElements'
 import { AboutCardBG, AboutText2, AboutCard, AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, TopLine, Heading, Subtitle, FadeInDiv, ImgWrap, ImgWrap2, Img, Cutoff } from './AboutElements'
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom'
+import Zoom from 'react-reveal/Zoom';
 import img1 from '../../images/pfp-1.JPG';
 import img2 from '../../images/Floating.svg';
 
@@ -22,6 +22,13 @@ const About = () => {
       <AboutContainer id="about">
         <AboutWrapper>
           <AboutRow>
+          <Column2> 
+            <Fade right>
+              <ImgWrap style={{transform: `translateY(${offsetY * 0.1}px)`}}>
+                <Img src={img1} alt={'pfp'}/>
+              </ImgWrap>
+            </Fade>
+             </Column2>
             <Column1 style={{transform: `translateX(${offsetY * 0.1}px)  translateY(${offsetY * 0.05}px)`}}>
                 <TextWrapper>
                   <Heading className="header" >
@@ -36,11 +43,7 @@ const About = () => {
                   </Fade>
                 </TextWrapper>
             </Column1>
-             <Column2> 
-              <ImgWrap >
-                <Img src={img1} alt={'pfp'}/>
-              </ImgWrap>
-             </Column2>
+
           </AboutRow>
         </AboutWrapper>
 
