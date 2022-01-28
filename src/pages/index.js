@@ -6,7 +6,7 @@ import About from '../components/About'
 import { homeObjOne, homeObjTwo, homeObjThree} from '../components/Info/Data';
 import Navbar from '../components/Navbar'
 import Contacts from '../components/Contacts';
-import Sidebar from '../components/SideBar'
+import Sidebar from '../components/Sidebar'
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)

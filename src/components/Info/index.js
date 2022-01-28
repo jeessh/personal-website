@@ -23,7 +23,7 @@ const Info = ({lightBg, id, imgStart, topLine,
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
           
-          <Column1 style={{transform: `translateX(${offsetY * 0.06}px)` }}>
+          <Column1>
             <TextWrapper>
                 <TopLine>{topLine}</TopLine>
                 <Heading className="header" 
