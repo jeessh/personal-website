@@ -1,12 +1,12 @@
 import styled, { keyframes } from 'styled-components';
-import { fadeInLeft } from 'react-animations';
 
   
 export const AboutContainer = styled.div`
   color: #010606;
   background: #010606;
-  position: relative;
+  position: sticky;
   overflow: hidden;
+  box-shadow: 0 -10px 80px 50px;
 
   z-index: 1;
 
@@ -19,15 +19,26 @@ export const AboutWrapper = styled.div`
   z-index: 1;
   height: 500px;
   width: 100%;
-  max-width: 1100px;
-  padding-top: 200px;
+  padding-top: 400px;
   padding-bottom: 700px;
   padding-left: 30px;
   padding-right: 30px;
   justify-content: center;
   
+`
+export const AboutWrapper2 = styled.div`
+  display: grid;
+  z-index: 1;
+  height: 1200px;
+  width: 100%;
+  padding-top: 400px;
+  margin-bottom: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: center;
   
 `
+
 export const AboutRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
@@ -37,7 +48,6 @@ export const AboutRow = styled.div`
   @media screen and (max-width: 768px) {
     grid-template-areas: ${({imgStart}) => (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
     
-
   }
 `
 export const Column1 = styled.div`
@@ -99,10 +109,12 @@ export const Subtitle  = styled.p`
   padding-bottom:10px;
   color: #fff;
   `
+  
 export const BtnWrap = styled.div`
   display:flex;
   justify-content: flex-start;
 `;
+
 export const ImgWrap = styled.div`
   max-width: 555px;
 
@@ -111,7 +123,8 @@ export const ImgWrap = styled.div`
 export const ImgWrap2 = styled.div`
   max-width: 555px;
   position: absolute;
-  left: -1200px;
+  left: -1100px;
+  bottom: -200px;
   
 `
 
@@ -134,8 +147,7 @@ export const AboutText2 = styled.div`
   padding-bottom: 0px;
   position: relative;
   align-items: center;
-  top: -350px; 
-
+  top: -650px; 
 
 `
 export const AboutCard = styled.div`
@@ -165,14 +177,45 @@ export const AboutCardBG = styled.div`
   max-width: 800px;
   z-index: -1;
   position: relative;
-  top: -400px;
+  top: -200px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 `
 
 export const Cutoff = styled.div`
-  background-color: #f9f9f9;
-  height: 81px;
+  background-color: #010606;
+  height: 500px;
   width: 100%;
   position: relative;
   z-index: 1;
 `
+
+const fadeIn = keyframes`
+    from {
+    transform: scale(.25);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`
+
+const fadeOut = keyframes`
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(.25);
+    opacity: 0;
+  }
+`;
+
+export const Fade = styled.div`
+  display: inline-block;
+  visibility: ${props => props.out ? 'hidden' : 'visible'};
+  animation: ${props => props.out ? fadeOut : fadeIn} 2s linear;
+  transition: visibility 2s linear;
+`;
