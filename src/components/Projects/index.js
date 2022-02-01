@@ -20,16 +20,19 @@ const Projects = () => {
 
     <ProjectsContainer id='experiences'> 
         <ProjectsWrapper>
-            <RevealFade up>
             <TextWrapper>
+                <RevealFade up>
                 <ProjectsHeadline>
                     Do what you love.
                 </ProjectsHeadline>
+                </RevealFade>
+
+                <RevealFade down>
                 <ProjectsHeadline style={{transform: `translateY(${offsetY * 0.03}px)`}}>
                     Love what you do.
                 </ProjectsHeadline>
+                </RevealFade>
             </TextWrapper>
-            </RevealFade>
             <ProjectsWrapper2>
                     <Column>
                         <ProjectCardBG style={{transform: `translateY(${offsetY * 0.5}px)`}}> {/* 3rd */}

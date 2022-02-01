@@ -88,7 +88,7 @@ export const ProjectCardBG = styled.div`
   border-radius: 25px;
   height: 760px;
   padding:  10px;
-  box-shadow: 0 5px 30px #00000033;
+  box-shadow: 0 5px 80px 15px #ab95785d;
   
 `
 
@@ -111,8 +111,6 @@ export const TextWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     top: -40px;}
-
-
 `
 
 export const ProjectsHeadline = styled.h1`
