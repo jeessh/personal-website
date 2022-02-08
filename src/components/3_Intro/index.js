@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import Video from '../../videos/HeroBg.mp4'
-import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements'
-import { Button } from '../ButtonElements'
+import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './IntroElements'
 
-const Hero = () => {
+const Intro = () => {
   const [hover, setHover] = useState(false);
 
   const onHover = () => {
@@ -36,4 +35,4 @@ const Hero = () => {
 //
 
 
-export default Hero
+export default Intro
